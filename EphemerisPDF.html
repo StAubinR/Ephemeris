@@ -27,7 +27,6 @@
   <div id="msg"></div>
   </pre>
   <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
-  </script>
   <script>
   var width     = 11.0;
   var height    =  8.5;
@@ -700,6 +699,7 @@
       var oneDayMs  = 24*60*60*1000;
         nbDayYear = (lastDate - firstDate)/oneDayMs;
         nbWeek    = nbDayYear/7;
+      const { jsPDF } = window.jspdf;
       var doc = new jsPDF({
         orientation: 'landscape',
         unit: 'in',
